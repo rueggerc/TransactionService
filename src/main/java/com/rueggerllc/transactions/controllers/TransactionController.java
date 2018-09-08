@@ -27,6 +27,9 @@ public class TransactionController {
 	@GetMapping("/transactions")
 	public Iterable<Transaction> getTransactions() {
 		
+		
+		System.out.println("We are Inside getTransactions()");
+		
 		List<BackendTransaction> backendTransactions = backendService.getTransactions();
 		for (BackendTransaction backendTransaction : backendTransactions) {
 			System.out.println("Next Backend Transaction:" + backendTransaction.getTransactionID());
