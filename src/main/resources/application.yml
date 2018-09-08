@@ -1,0 +1,8 @@
+server:
+  port: 8080
+  
+chris:
+  app:
+    backendServiceURL: http://localhost:8088/transactions
+    foobar: Fred
+  

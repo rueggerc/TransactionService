@@ -1,0 +1,9 @@
+wiremock:
+  server:
+    port: 8090
+    httpsPort: 8099
+    
+chris:
+  app:
+    backendServiceURL: http://localhost:${wiremock.server.port}/transactions
+    

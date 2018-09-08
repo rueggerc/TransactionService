@@ -1,0 +1,6 @@
+{
+"transactions": [
+{"transactionID":"DummyTransaction_0","referenceID":"DummyReference:1000"},
+{"transactionID":"DummyTransaction_1","referenceID":"DummyReference:1001"},
+{"transactionID":"DummyTransaction_2","referenceID":"DummyReference:1002"},
+]}
