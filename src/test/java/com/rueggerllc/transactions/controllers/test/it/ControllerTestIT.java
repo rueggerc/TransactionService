@@ -1,4 +1,4 @@
-package com.rueggerllc.transactions.controllers.test;
+package com.rueggerllc.transactions.controllers.test.it;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
@@ -25,7 +25,7 @@ import com.rueggerllc.transactions.services.BackendServiceImpl;
 @AutoConfigureWireMock(port=8090)
 @ActiveProfiles("it")
 @AutoConfigureMockMvc
-public class ControllerTest extends AbstractTestNGSpringContextTests {
+public class ControllerTestIT extends AbstractTestNGSpringContextTests {
 
 	@Autowired
 	private BackendServiceImpl service;
@@ -37,14 +37,14 @@ public class ControllerTest extends AbstractTestNGSpringContextTests {
 	@Test
 	public void testController() throws Exception {
 		
-		System.out.println("testController BEGIN");
-		stubFor(get(urlEqualTo("/transactions"))
-			   .willReturn(aResponse().withStatus(200)
-			   .withHeader("Content-Type","application/json")
-			   .withBodyFile("dummyTransactions.json")));
-			   
-		controller.getTransactions();
-		System.out.println("Test Passed!");
+		System.out.println("testController INTEGRATION BEGIN");
+//		stubFor(get(urlEqualTo("/transactions"))
+//			   .willReturn(aResponse().withStatus(200)
+//			   .withHeader("Content-Type","application/json")
+//			   .withBodyFile("dummyTransactions.json")));
+//			   
+//		controller.getTransactions();
+//		System.out.println("Test Passed!");
 		
 	}
 

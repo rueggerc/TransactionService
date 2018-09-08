@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="REST Controller Integration Test Suite" verbose="1" parallel="false" thread-count="3">
+
+	<test name="Rest Controller Tests">
+	  <classes>
+	    <class name="com.rueggerllc.transactions.controllers.test.it.ControllerTestIT"/>
+	  </classes>
+	</test>
+
+</suite>

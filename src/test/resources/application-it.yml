@@ -5,7 +5,7 @@ wiremock:
     
 chris:
   app:
-    backendServiceURL: http://localhost:8090/transactions
+    backendServiceURL: http://localhost:${wiremock.server.port}/transactions
     foobar: Fred
    
     

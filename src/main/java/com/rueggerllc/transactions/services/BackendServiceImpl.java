@@ -28,12 +28,12 @@ public class BackendServiceImpl {
 	public List<BackendTransaction> getTransactions() {
 		
 		String backendServiceURL = app.getBackendServiceURL();
-		System.out.println("Connecting to BackendService AT=" + backendServiceURL);
+		System.out.println("BackendServiceImpl Connecting to BackendService AT=" + backendServiceURL);
 		
 		RestTemplate restTemplate = new RestTemplate();
 		
-		ResponseEntity<String> responseEntityJSON = restTemplate.exchange(backendServiceURL,HttpMethod.GET, getHeaders(), String.class);
-		System.out.println("GOT JSON=\n" + responseEntityJSON.getBody());
+		// ResponseEntity<String> responseEntityJSON = restTemplate.exchange(backendServiceURL,HttpMethod.GET, getHeaders(), String.class);
+		// System.out.println("GOT JSON=\n" + responseEntityJSON.getBody());
 		
 		// Response Object
 		ResponseEntity<BackendTransactionResponse> responseEntity = restTemplate.exchange(backendServiceURL,HttpMethod.GET,getHeaders(),BackendTransactionResponse.class);
